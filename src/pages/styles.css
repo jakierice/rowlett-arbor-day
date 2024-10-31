@@ -18,6 +18,8 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 header h1 {
@@ -39,11 +41,27 @@ nav a {
 }
 
 main {
-    padding: 2rem;
+    width: 100%;
+    padding: 24px 24px 80px 24px;
+    margin: 0px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 section {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.tree-option {
+    margin-bottom: 8px;
 }
 
 img {
@@ -65,4 +83,28 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Phone (up to 600px) */
+@media only screen and (max-width: 600px) {
+    /* Styles for phones */
+    main {
+        width: 100vw;
+    }
+}
+
+/* Tablet (601px to 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    /* Styles for tablets */
+    main {
+        width: 80vw;
+    }
+}
+
+/* Desktop (993px and up) */
+@media only screen and (min-width: 993px) {
+    /* Styles for desktops */
+    main {
+        width: 60vw;
+    }
 }
