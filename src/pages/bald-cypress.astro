@@ -1,27 +1,20 @@
 ---
+import TreeDetails from "../components/TreeDetails.astro";
 import MainContentLayout from "../layouts/MainContentLayout.astro";
+
+const plantingText =
+  "Plant Bald Cypress in wet or moist areas. They are particularly well-suited for swampy conditions but can also adapt to drier soils.";
+const careText =
+  "Requires regular watering. Mulch around the base to retain moisture. Minimal pruning is needed, mainly to remove dead or damaged branches.";
 ---
 
 <MainContentLayout>
-  <main>
-    <section id="bald-cypress">
-      <h2>Bald Cypress</h2>
-      <img
-        src="https://media.istockphoto.com/id/172183369/photo/mighty-bald-cypress.jpg?s=612x612&w=0&k=20&c=HmuUvVLdvCEdIf13-RhnTVLuaU895W2qqNaTrkjT4pQ="
-        alt="Bald Cypress Tree"
-      />
-      <div class="info">
-        <h3>Planting</h3>
-        <p>
-          Plant Bald Cypress in wet or moist areas. They are particularly
-          well-suited for swampy conditions but can also adapt to drier soils.
-        </p>
-        <h3>Care</h3>
-        <p>
-          Requires regular watering. Mulch around the base to retain moisture.
-          Minimal pruning is needed, mainly to remove dead or damaged branches.
-        </p>
-      </div>
-    </section>
-  </main>
+  <TreeDetails
+    id="bald-cypress"
+    name="Bald Cypress"
+    imageSrc="https://media.istockphoto.com/id/172183369/photo/mighty-bald-cypress.jpg?s=612x612&w=0&k=20&c=HmuUvVLdvCEdIf13-RhnTVLuaU895W2qqNaTrkjT4pQ="
+    imageDescription="Bald Cypress Tree"
+    plantingInstructions={plantingText}
+    careInstructions={careText}
+  />
 </MainContentLayout>

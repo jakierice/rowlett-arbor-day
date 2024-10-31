@@ -1,29 +1,20 @@
 ---
+import TreeDetails from "../components/TreeDetails.astro";
 import MainContentLayout from "../layouts/MainContentLayout.astro";
+
+const plantingText =
+  "Cedar Elms prefer full sun and well-drained soil. They are adaptable to various soil types but grow best in a slightly acidic to neutral pH.";
+const careText =
+  "Water regularly during dry periods. Cedar Elms are relatively low-maintenance. Prune to remove any crossing branches and improve air circulation.";
 ---
 
 <MainContentLayout>
-  <main>
-    <section id="cedar-elm">
-      <h2>Cedar Elm</h2>
-      <img
-        src="https://bowerandbranch.com/cdn/shop/products/Allee1.jpg?v=1680786474"
-        alt="Cedar Elm Tree"
-      />
-      <div class="info">
-        <h3>Planting</h3>
-        <p>
-          Cedar Elms prefer full sun and well-drained soil. They are adaptable
-          to various soil types but grow best in a slightly acidic to neutral
-          pH.
-        </p>
-        <h3>Care</h3>
-        <p>
-          Water regularly during dry periods. Cedar Elms are relatively
-          low-maintenance. Prune to remove any crossing branches and improve air
-          circulation.
-        </p>
-      </div>
-    </section>
-  </main>
+  <TreeDetails
+    id="cedar-elm"
+    name="Cedar Elm"
+    imageSrc="https://bowerandbranch.com/cdn/shop/products/Allee1.jpg?v=1680786474"
+    imageDescription="Cedar Elm Tree"
+    plantingInstructions={plantingText}
+    careInstructions={careText}
+  />
 </MainContentLayout>

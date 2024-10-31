@@ -1,28 +1,20 @@
 ---
+import TreeDetails from "../components/TreeDetails.astro";
 import MainContentLayout from "../layouts/MainContentLayout.astro";
+
+const plantingText =
+  "Red Oaks thrive in well-drained, loamy soil and full sun. They prefer slightly acidic to neutral soil.";
+const careText =
+  "Water young trees regularly. Once established, they are relatively drought-tolerant. Fertilize in early spring and prune to shape as needed.";
 ---
 
 <MainContentLayout>
-  <main>
-    <section id="red-oak">
-      <h2>Red Oak</h2>
-      <img
-        src="https://www.plantingtree.com/cdn/shop/products/3114.jpg?v=1614189423"
-        alt="Red Oak Tree"
-      />
-      <div class="info">
-        <h3>Planting</h3>
-        <p>
-          Red Oaks thrive in well-drained, loamy soil and full sun. They prefer
-          slightly acidic to neutral soil.
-        </p>
-        <h3>Care</h3>
-        <p>
-          Water young trees regularly. Once established, they are relatively
-          drought-tolerant. Fertilize in early spring and prune to shape as
-          needed.
-        </p>
-      </div>
-    </section>
-  </main>
+  <TreeDetails
+    id="red-oak"
+    name="Red Oak"
+    imageSrc="https://www.plantingtree.com/cdn/shop/products/3114.jpg?v=1614189423"
+    imageDescription="Red Oak Tree"
+    plantingInstructions={plantingText}
+    careInstructions={careText}
+  />
 </MainContentLayout>

@@ -1,0 +1,30 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  plantingInstructions: string;
+  careInstructions: string;
+  imageSrc: string;
+  imageDescription: string;
+}
+
+const {
+  id,
+  name,
+  plantingInstructions,
+  careInstructions,
+  imageSrc,
+  imageDescription,
+} = Astro.props;
+---
+
+<section id={id}>
+  <h2>{name}</h2>
+  <img src={imageSrc} alt={imageDescription} />
+  <div class="info">
+    <h3>Planting</h3>
+    <p>{plantingInstructions}</p>
+    <h3>Care</h3>
+    <p>{careInstructions}</p>
+  </div>
+</section>
