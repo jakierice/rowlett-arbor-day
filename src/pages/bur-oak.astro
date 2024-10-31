@@ -1,44 +1,28 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
-import "../styles/index.css";
+import MainContentLayout from "../layouts/MainContentLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Rowlett Arbor Day</title>
-  </head>
-  <body>
-    <Header />
-
-    <main>
-      <section id="bur-oak">
-        <h2>Bur Oak</h2>
-        <img
-          src="https://www.shutterstock.com/image-photo/majestic-burr-oak-tree-grassy-600nw-2372732621.jpg"
-          alt="Bur Oak Tree"
-        />
-        <div class="info">
-          <h3>Planting</h3>
-          <p>
-            The Bur Oak is a hardy tree that thrives in a range of soil types.
-            It's best to plant in well-drained soil with full sun exposure.
-          </p>
-          <h3>Care</h3>
-          <p>
-            Water regularly during the first few years of growth. Once
-            established, Bur Oaks are drought-tolerant. Prune during the dormant
-            season to maintain shape.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+<MainContentLayout>
+  <main>
+    <section id="bur-oak">
+      <h2>Bur Oak</h2>
+      <img
+        src="https://www.shutterstock.com/image-photo/majestic-burr-oak-tree-grassy-600nw-2372732621.jpg"
+        alt="Bur Oak Tree"
+      />
+      <div class="info">
+        <h3>Planting</h3>
+        <p>
+          The Bur Oak is a hardy tree that thrives in a range of soil types.
+          It's best to plant in well-drained soil with full sun exposure.
+        </p>
+        <h3>Care</h3>
+        <p>
+          Water regularly during the first few years of growth. Once
+          established, Bur Oaks are drought-tolerant. Prune during the dormant
+          season to maintain shape.
+        </p>
+      </div>
+    </section>
+  </main>
+</MainContentLayout>

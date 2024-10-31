@@ -1,44 +1,28 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
-import "../styles/index.css";
+import MainContentLayout from "../layouts/MainContentLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Rowlett Arbor Day</title>
-  </head>
-  <body>
-    <Header />
-
-    <main>
-      <section id="red-oak">
-        <h2>Red Oak</h2>
-        <img
-          src="https://www.plantingtree.com/cdn/shop/products/3114.jpg?v=1614189423"
-          alt="Red Oak Tree"
-        />
-        <div class="info">
-          <h3>Planting</h3>
-          <p>
-            Red Oaks thrive in well-drained, loamy soil and full sun. They
-            prefer slightly acidic to neutral soil.
-          </p>
-          <h3>Care</h3>
-          <p>
-            Water young trees regularly. Once established, they are relatively
-            drought-tolerant. Fertilize in early spring and prune to shape as
-            needed.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+<MainContentLayout>
+  <main>
+    <section id="red-oak">
+      <h2>Red Oak</h2>
+      <img
+        src="https://www.plantingtree.com/cdn/shop/products/3114.jpg?v=1614189423"
+        alt="Red Oak Tree"
+      />
+      <div class="info">
+        <h3>Planting</h3>
+        <p>
+          Red Oaks thrive in well-drained, loamy soil and full sun. They prefer
+          slightly acidic to neutral soil.
+        </p>
+        <h3>Care</h3>
+        <p>
+          Water young trees regularly. Once established, they are relatively
+          drought-tolerant. Fertilize in early spring and prune to shape as
+          needed.
+        </p>
+      </div>
+    </section>
+  </main>
+</MainContentLayout>

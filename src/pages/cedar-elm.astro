@@ -1,45 +1,29 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
-import "../styles/index.css";
+import MainContentLayout from "../layouts/MainContentLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Rowlett Arbor Day</title>
-  </head>
-  <body>
-    <Header />
-
-    <main>
-      <section id="cedar-elm">
-        <h2>Cedar Elm</h2>
-        <img
-          src="https://bowerandbranch.com/cdn/shop/products/Allee1.jpg?v=1680786474"
-          alt="Cedar Elm Tree"
-        />
-        <div class="info">
-          <h3>Planting</h3>
-          <p>
-            Cedar Elms prefer full sun and well-drained soil. They are adaptable
-            to various soil types but grow best in a slightly acidic to neutral
-            pH.
-          </p>
-          <h3>Care</h3>
-          <p>
-            Water regularly during dry periods. Cedar Elms are relatively
-            low-maintenance. Prune to remove any crossing branches and improve
-            air circulation.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+<MainContentLayout>
+  <main>
+    <section id="cedar-elm">
+      <h2>Cedar Elm</h2>
+      <img
+        src="https://bowerandbranch.com/cdn/shop/products/Allee1.jpg?v=1680786474"
+        alt="Cedar Elm Tree"
+      />
+      <div class="info">
+        <h3>Planting</h3>
+        <p>
+          Cedar Elms prefer full sun and well-drained soil. They are adaptable
+          to various soil types but grow best in a slightly acidic to neutral
+          pH.
+        </p>
+        <h3>Care</h3>
+        <p>
+          Water regularly during dry periods. Cedar Elms are relatively
+          low-maintenance. Prune to remove any crossing branches and improve air
+          circulation.
+        </p>
+      </div>
+    </section>
+  </main>
+</MainContentLayout>
